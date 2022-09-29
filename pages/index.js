@@ -1,9 +1,11 @@
+import React from "react";
 import NextLink from "../src/components/Link";
+import Title from "../src/components/Title";
 
 export default function Home(){
    return (
       <div>
-         <h1>Studying NextJS</h1>
+         <Title as="h1">Studying NextJS</Title>
 
          <div className="navLinks">
             <h2>Routes</h2>
@@ -13,6 +15,10 @@ export default function Home(){
             <NextLink href="/teste2">
                Teste 2
             </NextLink>
+         </div>
+
+         <div>
+            <Title as='h2'>CSS-in-Js</Title>
          </div>
 
       </div>
