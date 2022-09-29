@@ -7,7 +7,7 @@ export default function Title({ children, as }) {
       <React.Fragment>
          <style jsx>{`
             ${Tag} {
-               color: red;
+               color: #fefefe;
             }
          `}</style>
          <Tag>

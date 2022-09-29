@@ -1,5 +1,6 @@
 import React from "react";
 import NextLink from "../src/components/Link";
+import TextBolder from "../src/components/Texts";
 import Title from "../src/components/Title";
 
 export default function Home(){
@@ -8,7 +9,7 @@ export default function Home(){
          <Title as="h1">Studying NextJS</Title>
 
          <div className="navLinks">
-            <h2>Routes</h2>
+            <TextBolder as="p">Routes</TextBolder>
             <NextLink href="/teste1">
                Teste 1
             </NextLink>

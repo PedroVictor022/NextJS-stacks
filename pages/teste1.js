@@ -1,9 +1,10 @@
 import NextLink from "../src/components/Link";
+import Title from "../src/components/Title";
 
 export default function Teste1() {
    return (
       <div>
-         <h1>Pagina de teste 1</h1>
+         <Title as='h1'>Pagina de teste 1</Title>
          <NextLink href="/">Voltar para o Home!</NextLink>
       </div>
    )

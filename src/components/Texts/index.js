@@ -6,7 +6,7 @@ export default function TextBolder({ children, as }) {
       <React.Fragment>
          <style jsx>{`
             ${Tag} {
-               color: #222;
+               color: #f3f3f3;
                font-weight:900;
                font-family:sans-serif;
             }
