@@ -1,17 +1,28 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Link from '../src/components/Link';
 
-export default function FAQPage() {
-    useEffect(() => {
-        const FAQ_API = "https://gist.githubusercontent.com/omariosouto/0ceab54bdd8182cbd1a4549d32945c1a/raw/578ad1e8e5296fa048e3e7ff6b317f7497b31ad9/alura-cases-faq.json"
-        
-        fetch(FAQ_API)
-            .then((res) => {
-                return res.json()
-            })
-            .then(data => console.log(data))
+// API LINK "https://gist.githubusercontent.com/omariosouto/0ceab54bdd8182cbd1a4549d32945c1a/raw/578ad1e8e5296fa048e3e7ff6b317f7497b31ad9/alura-cases-faq.json"
 
-    }, [])
+export async function getStaticProps() {
+    // Itens passados aqui, serão enviados como props para a função principal
+
+    const FETCH_LINK = "https://gist.githubusercontent.com/omariosouto/0ceab54bdd8182cbd1a4549d32945c1a/raw/578ad1e8e5296fa048e3e7ff6b317f7497b31ad9/alura-cases-faq.json";
+
+    const apiLink = await fetch(FETCH_LINK)
+        .then(res => res.json())
+        .then(data => data);
+
+    return {
+        props: {
+            apiLink
+        }   
+    }
+}
+
+export default function FAQPage({ apiLink }) {
+    console.log(apiLink)
+    const [faq, setFaq] = useState(apiLink);
+
 
     return (
         <div>
@@ -19,6 +30,18 @@ export default function FAQPage() {
             <Link href="/">
                 Ir para a home
             </Link>
+
+            <ul>
+                {faq.map(({ answer, question }) => (
+                    <li key={question}>
+                        <article>
+                            <h2>{question}</h2>
+                            <p>{answer}</p>
+                        </article>
+                    </li>
+                ))}
+            </ul>
+
         </div>
     )
 }
