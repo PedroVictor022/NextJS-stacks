@@ -1,28 +1,35 @@
-import React from "react";
-import NextLink from "../src/components/Link";
-import Header from "../src/components/Patterns/Header";
-import TextBolder from "../src/components/Texts";
-import Title from "../src/components/Title";
+import HomeScreen from '../src/screens/HomeScreen';
 
-export default function Home(){
-   return (
-      <div>
-         <Header />
+export default HomeScreen;
 
-         <div className="navLinks">
-            <TextBolder as="p">Routes</TextBolder>
-            <NextLink href="/teste1">
-               Teste 1
-            </NextLink>
-            <NextLink href="/teste2">
-               Teste 2
-            </NextLink>
-         </div>
+// import React from 'react';
+// import Link from '../src/components/Link';
+// import Footer from '../src/components/patterns/Footer';
 
-         <div>
-            <Title as='h2'>CSS-in-Js</Title>
-         </div>
+// function Title({ children, as }) {
+//     const Tag = as;
+//     return (
+//         <React.Fragment>
+//             <Tag>
+//                 {children}
+//             </Tag>
+//             <style jsx>{`
+//                 ${Tag} {
+//                     color: red;
+//                 }
+//             `}</style>
+//         </React.Fragment>
+//     );
+// }
 
-      </div>
-   )
-}
+// export default function HomePage() {
+//     return (
+//         <div>
+//             <Title as="h2">Alura Cases - Home</Title>
+//             <Link href="/faq">
+//                 Ir para a página do FAQ
+//             </Link>
+//             <Footer />
+//         </div>
+//     )
+// }

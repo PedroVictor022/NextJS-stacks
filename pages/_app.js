@@ -1,11 +1,12 @@
-import React from "react";
-import GlobalStyles from "../src/styles/Global"
-function MyApp({ Component, pageProps}) {
-   return (
-      <React.Fragment>
-         <GlobalStyles/>
-         <Component {...pageProps}/>
-      </React.Fragment>
-   )
+import GlobalStyle from '../src/theme/GlobalStyle';
+
+function MyApp({ Component, pageProps }) {
+    return (
+        <>
+            <GlobalStyle />
+            <Component {...pageProps} />
+        </>
+    )
 }
-export default MyApp
+
+export default MyApp;
