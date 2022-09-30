@@ -1,12 +1,13 @@
 import React from "react";
 import NextLink from "../src/components/Link";
+import Header from "../src/components/Patterns/Header";
 import TextBolder from "../src/components/Texts";
 import Title from "../src/components/Title";
 
 export default function Home(){
    return (
       <div>
-         <Title as="h1">Studying NextJS</Title>
+         <Header />
 
          <div className="navLinks">
             <TextBolder as="p">Routes</TextBolder>

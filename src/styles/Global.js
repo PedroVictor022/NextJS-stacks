@@ -3,7 +3,10 @@ function GlobalStyles() {
       <style global jsx>
       {`
          *{
-            font-family:sans-serif
+            font-family:sans-serif;
+            padding:0;
+            margin:0;
+            box-sizing:border-box;
          }
          body{
             background-color:#222;
