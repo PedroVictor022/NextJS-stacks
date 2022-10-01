@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import Link from '../src/components/Link';
 
@@ -15,17 +16,19 @@ export async function getStaticProps() {
     return {
         props: {
             apiLink
-        }   
+        }
     }
 }
 
 export default function FAQPage({ apiLink }) {
-    console.log(apiLink)
     const [faq, setFaq] = useState(apiLink);
 
 
     return (
         <div>
+            <Head>
+                <title>FAQ - Alura Cases FAQ</title>
+            </Head>
             <h1>Alura Cases - Páginas de Perguntas FAQ</h1>
             <Link href="/">
                 Ir para a home
